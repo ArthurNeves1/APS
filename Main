@@ -1,0 +1,18 @@
+package aps;
+
+public class APS {
+
+    public static void main(String[] args){
+        
+        Fachada x = new Fachada();    
+        
+        x.criarPostSimples("Atividade", "Matematica");
+        x.criarPostSimples("Trabalho", "Historia");
+        x.criarPostTar("Portugues", "Prova", "15 dias");
+        
+        x.arquivar("Portugues");
+        x.arquivar("Atividade");
+        
+        x.verArquivados();
+    }
+}
