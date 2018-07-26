@@ -1,0 +1,67 @@
+
+package aps;
+
+import java.util.ArrayList;
+
+public class Fachada {
+    
+    ArrayList<Post> postIt = new ArrayList<Post>();
+    ArrayList<Post> arquivado = new ArrayList<Post>();
+
+    public ArrayList getPostIt() {
+        return postIt;
+    }
+
+    public ArrayList getArquivado() {
+        return arquivado;
+    }
+
+    public void setPostIt(ArrayList postIt) {
+        this.postIt = postIt;
+    }
+
+    public void setArquivado(ArrayList arquivado) {
+        this.arquivado = arquivado;
+    }    
+    
+    public void criarPostSimples(String tag,String desc){
+        Post x = new PostSimples(tag,desc);
+        postIt.add(x);
+        System.out.println("Post criado: " + x.toString());
+    }
+    public void visualizarTudo(){
+        for( Object x: postIt){
+            System.out.println(x);
+        }
+
+    }
+    public void criarPostTar(String tag,String desc,String temp){
+        PostTar x = new PostTar(tag,desc,temp);
+        postIt.add(x);
+        System.out.println("Post criado" + x.toString());
+    }
+    
+    public void buscar(String tagB){
+        for(Post p: postIt){
+            if(p.getTag().contains(tagB)){
+                System.out.println(p.toString());
+            }
+        }
+        
+    }
+    
+    public void arquivar(String tagB){
+        for(Post p: postIt){
+            if(p.getTag().contains(tagB)){
+                arquivado.add(p);
+            }
+            }
+        }
+    
+    public void verArquivados(){
+        for(Post p: arquivado){
+            System.out.println(p);
+}
+    }
+    
+    }
