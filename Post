@@ -1,0 +1,20 @@
+
+public class Post {
+
+
+    public String getTag() {
+        return tag;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+    private String tag;
+    private String desc;
+
+    public Post(String tag, String desc) {
+        this.tag = tag;
+        this.desc = desc;
+    } 
+    
+}
