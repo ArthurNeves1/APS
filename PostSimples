@@ -1,0 +1,17 @@
+
+package aps;
+
+public class PostSimples extends Post {
+    
+    public PostSimples(String tag, String desc) {
+        super(tag, desc);
+    }
+
+    @Override
+    public String toString() {
+        return "PostSimples{"+" Tag= "+super.getTag()+" Descrição= "+super.getDesc() + '}';
+    }
+    
+    
+    
+}
