@@ -1,0 +1,19 @@
+
+package aps;
+
+public class PostTar extends Post {
+   
+    private String tempo;
+
+    public PostTar(String tag, String desc,String tempo) {
+        super(tag, desc);
+        this.tempo=tempo;
+    }
+
+    @Override
+    public String toString() {
+        return "PostTar{"+ "Descrição=" +super.getDesc() + " Tag="+ super.getTag() +  " tempo=" + this.tempo + '}';
+    }
+
+    
+}
